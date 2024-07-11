@@ -1,0 +1,206 @@
+$font-Color_white: white;
+$font-Color_black: black;
+$font-Color_placeholder: rgba(187, 187, 187, 0.589);
+$background-color: linear-gradient(142.2deg, #000000 55%, #ec165300 100%);
+$font-heading: 42px;
+$color_gray: #b0b0b0;
+$color_lightBlack: #212121;
+$weight400: 400;
+$weight500: 500;
+$font_18: 14px;
+$color_red: #ec1653;
+$font-sub_heading: 28px;
+$font-para: 20px;
+$border_rad: 5px;
+$null: 0px !important;
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ec16538e;
+    border-radius: 3px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #F4F4F4;
+    color: $font-Color_black;
+    overflow-x: hidden;
+
+    .btn-enquiry {
+        background-color: $color_red;
+        color: $font-Color_white;
+        font-weight: 500;
+    }
+
+    nav {
+        border-bottom: 0.1px solid $font-Color_white;
+
+        img {
+            width: 150px;
+            height: 50px;
+        }
+
+        .offcanvas {
+            background-color: $font-Color_white;
+
+            .btn-close {
+                background-color: $font-Color_white;
+            }
+
+            .nav-item {
+                list-style-type: none;
+
+                .nav-link {
+                    color: $font-Color_black;
+                    font-size: $font-para;
+                }
+            }
+        }
+
+        i {
+            color: $font-Color_black;
+        }
+    }
+
+    .search {
+        background: #551615;
+        top: 90px !important;
+        z-index: 0;
+
+        .input-field {
+            select {
+                width: 100% !important;
+                height: 50px;
+                padding: 3%;
+                border-radius: $border_rad;
+                border: $null;
+            }
+
+            select:focus {
+                outline: $null;
+            }
+        }
+
+        button {
+            width: 100%;
+            padding: 5%;
+            height: 50px;
+        }
+    }
+
+    .bus-list {
+        border-radius: $border_rad;
+        color: $font-Color_black;
+        box-shadow: 5px 5px 10px rgba(97, 97, 97, 0.062);
+    }
+
+    .loading {
+        min-height: 260px;
+
+        img {
+            width: 500px;
+            height: 500px;
+        }
+    }
+
+    .banner {
+        .row-1 {
+            p {
+                color: $color_gray;
+                font-size: $font_18;
+            }
+
+            .Cta {
+                border-left: 1px solid #dee2e6;
+
+                h6 {
+                    font-size: 13px;
+                    color: $color_lightBlack;
+                    font-weight: $weight400;
+                }
+
+                p {
+                    font-size: 26px;
+                    color: $color_lightBlack;
+                    font-weight: $weight500;
+                }
+            }
+        }
+    }
+
+    .seatlayout {
+        border-radius: 5px;
+
+        .bus {
+            border-radius: 5px;
+            box-shadow: -2px 3px 20px 0px rgba(0, 0, 0, 0.14);
+
+            .tier {
+                width: 20px;
+                height: 20px;
+            }
+            
+        }
+    }
+
+    footer {
+        .bg-darkRed {
+            background-color: #551615;
+            color: $font-Color_white;
+        }
+
+        .bg-lightred {
+            background-color: #ec1653;
+            color: $font-Color_white;
+            height: 50px;
+        }
+    }
+
+}
+
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {}
+
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+    body {
+        nav {
+            flex-wrap: nowrap !important;
+
+            .navbar-brand img {
+                width: 75% !important;
+            }
+        }
+
+        .banner {
+            .none {
+                display: none;
+            }
+
+            .Cta {
+                text-align: center !important;
+                border-left: 0px solid #dee2e600 !important;
+
+                p {
+                    font-size: 20px;
+                    margin: 0px;
+                    color: $color_lightBlack;
+                    font-weight: $weight500;
+                }
+            }
+        }
+
+        .features{
+            display: none;
+        }
+
+    }
+
+
+}
